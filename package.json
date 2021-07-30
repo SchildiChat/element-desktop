@@ -114,6 +114,11 @@
     },
     "mac": {
       "category": "public.app-category.social-networking",
+      "extendInfo": {
+        "NSUserActivityTypes": [
+          "org.matrix.room"
+        ]
+      },
       "darkModeSupport": true
     },
     "win": {
