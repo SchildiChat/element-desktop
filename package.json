@@ -115,7 +115,10 @@
     "mac": {
       "category": "public.app-category.social-networking",
       "darkModeSupport": true,
-      "hardenedRuntime": true,
+      "hardenedRuntime": false,
+      "extendInfo": {
+        "ITSAppUsesNonExemptEncryption": true
+      },
       "entitlements": "build/entitlements.mac.plist",
       "entitlementsInherit": "build/entitlements.mac.plist"
     },
