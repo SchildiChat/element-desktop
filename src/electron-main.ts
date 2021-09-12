@@ -784,10 +784,13 @@ if (!app.commandLine.hasSwitch('enable-features')) {
     app.commandLine.appendSwitch('enable-features', 'WebRTCPipeWireCapturer');
 }
 
-const gotLock = app.requestSingleInstanceLock();
-if (!gotLock) {
-    console.log('Other instance detected: exiting');
-    app.exit();
+// electron requestSingleInstanceLock does not work on macos-mas builds, only use it on non mas builds
+if (process.mas !== true) {
+    const gotLock = app.requestSingleInstanceLock();
+    if (!gotLock) {
+        console.log('Other instance detected: exiting');
+        app.exit();
+    }
 }
 
 // do this after we know we are the primary instance of the app

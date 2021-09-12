@@ -135,11 +135,12 @@
       "icon": "build/dmg.icns"
     },
     "mas": {
+      "extendInfo": {
+        "LSMultipleInstancesProhibited": true
+      },
       "entitlements": "build/entitlements.mas.plist",
-      "entitlementsInherit": "build/entitlements.mas.inherit.plist",
-      "entitlementsLoginHelper": "build/entitlements.mas.loginhelper.plist",
       "provisioningProfile": "build/schildi_dev.provisionprofile",
-      "hardenedRuntime": true
+      "hardenedRuntime": false
     },
     "win": {
       "target": {
