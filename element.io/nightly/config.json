@@ -39,5 +39,13 @@
             "url": "https://element.io/cookie-policy",
             "text": "Cookie Policy"
         }
-    ]
+    ],
+    "sentry": {
+        "dsn": "https://029a0eb289f942508ae0fb17935bd8c5@sentry.matrix.org/6",
+        "environment": "nightly"
+    },
+    "posthog": {
+        "projectApiKey": "phc_Jzsm6DTm6V2705zeU5dcNvQDlonOR68XvX2sh1sEOHO",
+        "apiHost": "https://posthog.hss.element.io"
+    }
 }
