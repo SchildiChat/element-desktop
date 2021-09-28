@@ -1,15 +1,14 @@
 {
-  "name": "schildichat-desktop",
-  "productName": "SchildiChat",
+  "name": "element-desktop",
+  "productName": "Element",
   "main": "lib/electron-main.js",
-  "version": "1.8.5-sc1",
-  "description": "A Matrix Client based on Element with a more traditional instant messaging experience",
-  "author": "SchildiChat",
+  "version": "1.9.0",
+  "description": "A feature-rich client for Matrix.org",
+  "author": "Element",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SchildiChat/element-desktop"
+    "url": "https://github.com/vector-im/element-desktop"
   },
-  "homepage": "https://schildi.chat/",
   "license": "Apache-2.0",
   "files": [],
   "scripts": {
@@ -43,7 +42,6 @@
   "dependencies": {
     "auto-launch": "^5.0.5",
     "counterpart": "^0.18.6",
-    "electron-osx-sign": "^0.5.0",
     "electron-store": "^6.0.1",
     "electron-window-state": "^5.0.3",
     "minimist": "^1.2.3",
@@ -59,7 +57,7 @@
     "allchange": "^1.0.2",
     "asar": "^2.0.1",
     "chokidar": "^3.5.2",
-    "electron": "^13.1.9",
+    "electron": "13",
     "electron-builder": "22.11.4",
     "electron-builder-squirrel-windows": "22.11.4",
     "electron-devtools-installer": "^3.1.1",
@@ -84,8 +82,8 @@
     "keytar": "^5.6.0"
   },
   "build": {
-    "appId": "chat.schildi.desktop",
-    "electronVersion": "13.2.2",
+    "appId": "im.riot.app",
+    "electronVersion": "13.4.0",
     "files": [
       "package.json",
       {
@@ -103,44 +101,15 @@
     ],
     "linux": {
       "target": "deb",
-      "category": "Network;InstantMessaging;Chat;VideoConference",
-      "maintainer": "codeworks@supercable.onl",
+      "category": "Network;InstantMessaging;Chat",
+      "maintainer": "support@element.io",
       "desktop": {
-        "StartupWMClass": "schildichat"
+        "StartupWMClass": "element"
       }
-    },
-    "deb": {
-      "depends": ["libgtk-3-0", "libnotify4", "libnss3", "libxss1", "libxtst6", "xdg-utils", "libatspi2.0-0", "libuuid1", "libsecret-1-0", "libsqlcipher0"],
-      "packageCategory": "net",
-      "priority": "extra"
     },
     "mac": {
       "category": "public.app-category.social-networking",
-      "extendInfo": {
-        "NSUserActivityTypes": [
-          "org.matrix.room"
-        ],
-        "ITSAppUsesNonExemptEncryption": true
-      },
-      "darkModeSupport": true,
-      "hardenedRuntime": true,
-      "entitlements": "build/entitlements.mac.plist",
-      "entitlementsInherit": "build/entitlements.mac.inherit.plist",
-      "asarUnpack": [
-        ".hak/hakModules/keytar/build/Release/keytar.node",
-        ".hak/hakModules/matrix-seshat/native/index.node"
-      ]
-    },
-    "dmg": {
-      "icon": "build/dmg.icns"
-    },
-    "mas": {
-      "extendInfo": {
-        "LSMultipleInstancesProhibited": true
-      },
-      "entitlements": "build/entitlements.mas.plist",
-      "provisioningProfile": "build/schildi_dev.provisionprofile",
-      "hardenedRuntime": false
+      "darkModeSupport": true
     },
     "win": {
       "target": {
