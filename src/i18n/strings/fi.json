@@ -19,7 +19,7 @@
     "Hide": "Piilota",
     "Services": "Palvelut",
     "About": "Tietoja",
-    "Element Help": "SchildiChatin ohjeet",
+    "Element Help": "Elementin ohjeet",
     "Help": "Apua",
     "Close": "Sulje",
     "Minimize": "Pienennä",
@@ -41,6 +41,6 @@
     "Quit": "Lopeta",
     "Show/Hide": "Näytä/Piilota",
     "Are you sure you want to quit?": "Oletko varma että haluat poistua?",
-    "Close Element": "Sulje SchildiChat",
+    "Close Element": "Sulje Element",
     "Cancel": "Peruuta"
 }
