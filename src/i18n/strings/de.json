@@ -19,7 +19,7 @@
     "Hide Others": "Andere verstecken",
     "Hide": "Verstecken",
     "About": "Über",
-    "Element Help": "Hilfe zu SchildiChat",
+    "Element Help": "Hilfe zu Element",
     "Help": "Hilfe",
     "Close": "Schließen",
     "Minimize": "Minimieren",
@@ -41,7 +41,6 @@
     "Edit": "Bearbeiten",
     "Quit": "Beenden",
     "Show/Hide": "Anzeigen/Ausblenden",
-    "Close Element": "SchildiChat schließen",
-    "Cancel": "Abbrechen",
-    "Show": "Anzeigen"
+    "Close Element": "Element schließen",
+    "Cancel": "Abbrechen"
 }
