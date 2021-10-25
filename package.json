@@ -1,13 +1,13 @@
 {
-  "name": "schildichat-desktop",
-  "productName": "SchildiChat",
+  "name": "element-desktop",
+  "productName": "Element",
   "main": "lib/electron-main.js",
-  "version": "1.9.2-sc.0.test.1",
-  "description": "A Matrix Client based on Element with a more traditional instant messaging experience",
-  "author": "SchildiChat",
+  "version": "1.9.2",
+  "description": "A feature-rich client for Matrix.org",
+  "author": "Element",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SchildiChat/element-desktop"
+    "url": "https://github.com/vector-im/element-desktop"
   },
   "license": "Apache-2.0",
   "files": [],
@@ -46,8 +46,7 @@
     "electron-window-state": "^5.0.3",
     "minimist": "^1.2.3",
     "png-to-ico": "^2.1.1",
-    "request": "^2.88.2",
-    "electron-osx-sign": "^0.5.0"
+    "request": "^2.88.2"
   },
   "devDependencies": {
     "@types/auto-launch": "^5.0.1",
@@ -83,7 +82,7 @@
     "keytar": "^5.6.0"
   },
   "build": {
-    "appId": "chat.schildi.desktop",
+    "appId": "im.riot.app",
     "electronVersion": "13.5.1",
     "files": [
       "package.json",
@@ -102,28 +101,15 @@
     ],
     "linux": {
       "target": "deb",
-      "category": "Network;InstantMessaging;Chat;VideoConference",
-      "maintainer": "codeworks@supercable.onl",
+      "category": "Network;InstantMessaging;Chat",
+      "maintainer": "support@element.io",
       "desktop": {
-        "StartupWMClass": "schildichat"
+        "StartupWMClass": "element"
       }
     },
     "mac": {
       "category": "public.app-category.social-networking",
-      "darkModeSupport": true,
-      "extendInfo": {
-        "NSUserActivityTypes": [
-          "org.matrix.room"
-        ],
-        "ITSAppUsesNonExemptEncryption": true
-      },
-      "hardenedRuntime": true,
-      "entitlements": "build/entitlements.mac.plist",
-      "entitlementsInherit": "build/entitlements.mac.inherit.plist",
-      "asarUnpack": [
-        ".hak/hakModules/keytar/build/Release/keytar.node",
-        ".hak/hakModules/matrix-seshat/native/index.node"
-      ]
+      "darkModeSupport": true
     },
     "win": {
       "target": {
@@ -143,34 +129,6 @@
           "element"
         ]
       }
-    ],
-    "deb": {
-      "depends": [
-        "libgtk-3-0",
-        "libnotify4",
-        "libnss3",
-        "libxss1",
-        "libxtst6",
-        "xdg-utils",
-        "libatspi2.0-0",
-        "libuuid1",
-        "libsecret-1-0",
-        "libsqlcipher0"
-      ],
-      "packageCategory": "net",
-      "priority": "extra"
-    },
-    "dmg": {
-      "icon": "build/dmg.icns"
-    },
-    "mas": {
-      "extendInfo": {
-        "LSMultipleInstancesProhibited": true
-      },
-      "entitlements": "build/entitlements.mas.plist",
-      "provisioningProfile": "build/schildi_dev.provisionprofile",
-      "hardenedRuntime": false
-    }
-  },
-  "homepage": "https://schildi.chat/"
+    ]
+  }
 }
