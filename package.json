@@ -84,7 +84,7 @@
   },
   "build": {
     "appId": "chat.schildi.desktop",
-    "electronVersion": "13.5.1",
+    "electronVersion": "13.5.2",
     "files": [
       "package.json",
       {
