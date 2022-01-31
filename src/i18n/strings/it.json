@@ -15,7 +15,7 @@
     "Hide": "Nascondi",
     "Services": "Servizi",
     "About": "Al riguardo",
-    "Element Help": "Aiuto di Element",
+    "Element Help": "Aiuto di SchildiChat",
     "Help": "Aiuto",
     "Close": "Chiudi",
     "Minimize": "Riduci",
@@ -39,8 +39,9 @@
     "Quit": "Esci",
     "Show/Hide": "Mostra/Nascondi",
     "Are you sure you want to quit?": "Vuoi veramente uscire?",
-    "Close Element": "Chiudi Element",
+    "Close Element": "Chiudi SchildiChat",
     "Cancel": "Annulla",
     "Stop Speaking": "Smetti di parlare",
-    "Speech": "Dettatura"
+    "Speech": "Dettatura",
+    "Show": "Visualizza"
 }
