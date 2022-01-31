@@ -19,6 +19,7 @@ import { app, Tray, Menu, nativeImage } from "electron";
 import pngToIco from "png-to-ico";
 import path from "path";
 import fs from "fs";
+
 import { _t } from "./language-helper";
 
 let trayIcon: Tray = null;
@@ -35,7 +36,7 @@ export function destroy(): void {
 }
 
 function toggleWin(): void {
-    if (global.mainWindow.isVisible() && !global.mainWindow.isMinimized()) {
+    if (global.mainWindow.isVisible() && !global.mainWindow.isMinimized() && global.mainWindow.isFocused()) {
         global.mainWindow.hide();
     } else {
         if (global.mainWindow.isMinimized()) global.mainWindow.restore();

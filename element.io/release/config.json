@@ -13,6 +13,7 @@
     ],
     "hosting_signup_link": "https://element.io/matrix-services?utm_source=element-web&utm_medium=web",
     "bug_report_endpoint_url": "https://element.io/bugreports/submit",
+    "uisi_autorageshake_app": "element-auto-uisi",
     "roomDirectory": {
         "servers": [
             "matrix.org",
@@ -39,5 +40,9 @@
             "url": "https://element.io/cookie-policy",
             "text": "Cookie Policy"
         }
-    ]
+    ],
+    "posthog": {
+        "projectApiKey": "phc_Jzsm6DTm6V2705zeU5dcNvQDlonOR68XvX2sh1sEOHO",
+        "apiHost": "https://posthog.hss.element.io"
+    }
 }
