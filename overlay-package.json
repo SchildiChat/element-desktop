@@ -52,6 +52,20 @@
       "entitlements": "build/entitlements.mas.plist",
       "provisioningProfile": "build/schildi_dev.provisionprofile",
       "hardenedRuntime": false
-    }
+    },
+    "protocols": [
+      {
+        "name": "element",
+        "schemes": [
+          "element"
+        ]
+      },
+      {
+        "name": "schildichat",
+        "schemes": [
+          "schildichat"
+        ]
+      }
+    ]
   }
 }

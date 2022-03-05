@@ -19,7 +19,7 @@ import { URL } from "url";
 import path from "path";
 import fs from "fs";
 
-const PROTOCOL = "element:";
+const PROTOCOLS = new Set(["element:", "schildichat:"]);
 const SEARCH_PARAM = "element-desktop-ssoid";
 const STORE_FILE_NAME = "sso-sessions.json";
 
@@ -33,7 +33,7 @@ function processUrl(url: string): void {
     // sanity check: we only register for the one protocol, so we shouldn't
     // be getting anything else unless the user is forcing a URL to open
     // with the Element app.
-    if (parsed.protocol !== PROTOCOL) {
+    if (!PROTOCOLS.has(parsed.protocol)) {
         console.log("Ignoring unexpected protocol: ", parsed.protocol);
         return;
     }
@@ -82,10 +82,12 @@ export function recordSSOSession(sessionID: string): void {
 
 export function getProfileFromDeeplink(args): string | undefined {
     // check if we are passed a profile in the SSO callback url
-    const deeplinkUrl = args.find(arg => arg.startsWith(PROTOCOL + '//'));
+    const deeplinkUrl = args.find(arg => [...PROTOCOLS]
+        .map(protocol => protocol + '//')
+        .some(prefix => arg.startsWith(prefix)));
     if (deeplinkUrl && deeplinkUrl.includes(SEARCH_PARAM)) {
         const parsedUrl = new URL(deeplinkUrl);
-        if (parsedUrl.protocol === PROTOCOL) {
+        if (PROTOCOLS.has(parsedUrl.protocol)) {
             const ssoID = parsedUrl.searchParams.get(SEARCH_PARAM);
             const store = readStore();
             console.log("Forwarding to profile: ", store[ssoID]);
@@ -116,7 +118,7 @@ export function protocolInit(): void {
         // Protocol handler for win32/Linux
         app.on('second-instance', (ev, commandLine) => {
             const url = commandLine[commandLine.length - 1];
-            if (!url.startsWith(PROTOCOL + '//')) return;
+            if (![...PROTOCOLS].map(protocol => protocol + '//').some(prefix => url.startsWith(prefix))) return;
             processUrl(url);
         });
     }
