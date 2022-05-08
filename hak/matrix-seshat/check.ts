@@ -38,7 +38,7 @@ export default async function(hakEnv: HakEnv, moduleInfo: DependencyInfo): Promi
 
     const tools = [
         ['rustc', '--version'],
-        ['python', '--version'], // node-gyp uses python for reasons beyond comprehension
+        ['python3', '--version'], // node-gyp uses python for reasons beyond comprehension
     ];
     if (hakEnv.isWin()) {
         tools.push(['perl', '--version']); // for openssl configure

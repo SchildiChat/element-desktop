@@ -20,7 +20,7 @@ import HakEnv from '../../scripts/hak/hakEnv';
 import { DependencyInfo } from '../../scripts/hak/dep';
 
 export default async function(hakEnv: HakEnv, moduleInfo: DependencyInfo): Promise<void> {
-    const tools = [['python', '--version']]; // node-gyp uses python for reasons beyond comprehension
+    const tools = [['python3', '--version']]; // node-gyp uses python for reasons beyond comprehension
 
     for (const tool of tools) {
         await new Promise<void>((resolve, reject) => {
