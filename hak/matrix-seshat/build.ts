@@ -32,7 +32,7 @@ export default async function(hakEnv: HakEnv, moduleInfo: DependencyInfo): Promi
     await buildMatrixSeshat(hakEnv, moduleInfo);
 }
 
-async function buildOpenSslWin(hakEnv, moduleInfo) {
+async function buildOpenSslWin(hakEnv: HakEnv, moduleInfo: DependencyInfo) {
     const version = moduleInfo.cfg.dependencies.openssl;
     const openSslDir = path.join(moduleInfo.moduleTargetDotHakDir, `openssl-${version}`);
 
@@ -134,7 +134,7 @@ async function buildOpenSslWin(hakEnv, moduleInfo) {
     });
 }
 
-async function buildSqlCipherWin(hakEnv, moduleInfo) {
+async function buildSqlCipherWin(hakEnv: HakEnv, moduleInfo: DependencyInfo) {
     const version = moduleInfo.cfg.dependencies.sqlcipher;
     const sqlCipherDir = path.join(moduleInfo.moduleTargetDotHakDir, `sqlcipher-${version}`);
     const buildDir = path.join(sqlCipherDir, 'bld');
@@ -171,11 +171,9 @@ async function buildSqlCipherWin(hakEnv, moduleInfo) {
     );
 }
 
-async function buildSqlCipherUnix(hakEnv, moduleInfo) {
-    //const version = moduleInfo.cfg.dependencies.sqlcipher;
-    //const sqlCipherDir = path.join(moduleInfo.moduleTargetDotHakDir, `sqlcipher-${version}`);
-    // FIXME: revert
-    const sqlCipherDir = path.join(moduleInfo.moduleTargetDotHakDir, `sqlcipher-m1`);
+async function buildSqlCipherUnix(hakEnv: HakEnv, moduleInfo: DependencyInfo) {
+    const version = moduleInfo.cfg.dependencies.sqlcipher;
+    const sqlCipherDir = path.join(moduleInfo.moduleTargetDotHakDir, `sqlcipher-${version}`);
 
     const args = [
         '--prefix=' + moduleInfo.depPrefix + '',
@@ -266,7 +264,7 @@ async function buildSqlCipherUnix(hakEnv, moduleInfo) {
     });
 }
 
-async function buildMatrixSeshat(hakEnv, moduleInfo) {
+async function buildMatrixSeshat(hakEnv: HakEnv, moduleInfo: DependencyInfo) {
     // seshat now uses n-api so we shouldn't need to specify a node version to
     // build against, but it does seems to still need something in here, so leaving
     // it for now: we should confirm how much of this it still actually needs.
@@ -279,6 +277,21 @@ async function buildMatrixSeshat(hakEnv, moduleInfo) {
     });
 
     if (hakEnv.isLinux()) {
+        // Ensure Element uses the statically-linked seshat build, and prevent other applications
+        // from attempting to use this one. Detailed explanation:
+        //
+        // RUSTFLAGS
+        //     An environment variable containing a list of arguments to pass to rustc.
+        // -Clink-arg=VALUE
+        //     A rustc argument to pass a single argument to the linker.
+        // -Wl,
+        //     gcc syntax to pass an argument (from gcc) to the linker (ld).
+        // -Bsymbolic:
+        //     Prefer local/statically linked symbols over those in the environment.
+        //     Prevent overriding native libraries by LD_PRELOAD etc.
+        // --exclude-libs ALL
+        //     Prevent symbols from being exported by any archive libraries.
+        //     Reduces output filesize and prevents being dynamically linked against.
         env.RUSTFLAGS = '-Clink-arg=-Wl,-Bsymbolic -Clink-arg=-Wl,--exclude-libs,ALL';
     }
 
