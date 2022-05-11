@@ -172,8 +172,10 @@ async function buildSqlCipherWin(hakEnv: HakEnv, moduleInfo: DependencyInfo) {
 }
 
 async function buildSqlCipherUnix(hakEnv: HakEnv, moduleInfo: DependencyInfo) {
-    const version = moduleInfo.cfg.dependencies.sqlcipher;
-    const sqlCipherDir = path.join(moduleInfo.moduleTargetDotHakDir, `sqlcipher-${version}`);
+    //const version = moduleInfo.cfg.dependencies.sqlcipher;
+    //const sqlCipherDir = path.join(moduleInfo.moduleTargetDotHakDir, `sqlcipher-${version}`);
+    // FIXME: revert
+    const sqlCipherDir = path.join(moduleInfo.moduleTargetDotHakDir, `sqlcipher-m1`);
 
     const args = [
         '--prefix=' + moduleInfo.depPrefix + '',
