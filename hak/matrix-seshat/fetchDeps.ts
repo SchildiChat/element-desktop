@@ -60,7 +60,7 @@ async function getSqlCipher(hakEnv: HakEnv, moduleInfo: DependencyInfo): Promise
             output: sqlCipherTarball,
         });*/
         // FIXME: revert
-        const bob = needle('get', 'https://github.com/SchildiChat/sqlcipher/archive/refs/heads/m1.tar.gz', {
+        const bob = needle('get', 'https://github.com/SchildiChat/sqlcipher/archive/refs/heads/sc.tar.gz', {
             follow: 10,
             output: sqlCipherTarball,
         });
