@@ -17,7 +17,7 @@
     "Hide": "隱藏",
     "Services": "服務",
     "About": "關於",
-    "Element Help": "SchildiChat 協助",
+    "Element Help": "Element 協助",
     "Help": "協助",
     "Close": "關閉",
     "Minimize": "最小化",
@@ -41,7 +41,6 @@
     "Quit": "退出",
     "Show/Hide": "顯示/隱藏",
     "Are you sure you want to quit?": "您確定要退出嗎？",
-    "Close Element": "關閉 SchildiChat",
-    "Cancel": "取消",
-    "Show": "顯示"
+    "Close Element": "關閉 Element",
+    "Cancel": "取消"
 }

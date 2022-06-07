@@ -1,5 +1,5 @@
 {
-    "Element Help": "Rakenduse SchildiChat abiteave",
+    "Element Help": "Rakenduse Element abiteave",
     "About": "Rakenduse teave",
     "The image failed to save": "Seda pilti ei õnnestunud salvestada",
     "Add to dictionary": "Lisa sõnastikku",
@@ -41,8 +41,7 @@
     "Quit": "Välju",
     "Show/Hide": "Näita/peida",
     "Are you sure you want to quit?": "Kas sa kindlasti soovid rakendusest väljuda?",
-    "Close Element": "Sulge SchildiChat",
+    "Close Element": "Sulge Element",
     "Cancel": "Tühista",
-    "Copy image address": "Kopeeri pildi aadress",
-    "Show": "Näita"
+    "Copy image address": "Kopeeri pildi aadress"
 }
