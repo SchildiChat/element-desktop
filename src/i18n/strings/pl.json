@@ -17,7 +17,7 @@
     "Hide": "Ukryj",
     "Services": "Usługi",
     "About": "O nas",
-    "Element Help": "Pomoc SchildiChat",
+    "Element Help": "Pomoc Element",
     "Help": "Pomoc",
     "Close": "Zamknij",
     "Minimize": "Zminimalizuj",
@@ -41,8 +41,7 @@
     "Quit": "Zamknij",
     "Show/Hide": "Pokaż/Ukryj",
     "Are you sure you want to quit?": "Czy na pewno chcesz zamknąć?",
-    "Close Element": "Zamknij SchildiChata",
+    "Close Element": "Zamknij Elementa",
     "Cancel": "Anuluj",
-    "Copy image address": "Skopiuj adres obrazu",
-    "Show": "Pokaż"
+    "Copy image address": "Skopiuj adres obrazu"
 }
