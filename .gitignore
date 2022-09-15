@@ -14,3 +14,5 @@
 .vscode
 .vscode/
 .DS_Store
+/test_artifacts/
+/coverage/

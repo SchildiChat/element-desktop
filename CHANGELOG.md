@@ -1,5 +1,31 @@
+Changes in [1.11.5](https://github.com/vector-im/element-desktop/releases/tag/v1.11.5) (2022-09-13)
+===================================================================================================
+
+## ✨ Features
+ * Device manager - hide unverified security recommendation when only current session is unverified ([\#9228](https://github.com/matrix-org/matrix-react-sdk/pull/9228)). Contributed by @kerryarchibald.
+ * Device manager - scroll to filtered list from security recommendations ([\#9227](https://github.com/matrix-org/matrix-react-sdk/pull/9227)). Contributed by @kerryarchibald.
+ * Device manager - updated dropdown style in filtered device list ([\#9226](https://github.com/matrix-org/matrix-react-sdk/pull/9226)). Contributed by @kerryarchibald.
+ * Device manager - device type and verification icons on device tile ([\#9197](https://github.com/matrix-org/matrix-react-sdk/pull/9197)). Contributed by @kerryarchibald.
+
+## 🐛 Bug Fixes
+ * Description of DM room with more than two other people is now being displayed correctly ([\#9231](https://github.com/matrix-org/matrix-react-sdk/pull/9231)). Fixes vector-im/element-web#23094.
+ * Fix voice messages with multiple composers ([\#9208](https://github.com/matrix-org/matrix-react-sdk/pull/9208)). Fixes vector-im/element-web#23023. Contributed by @grimhilt.
+ * Fix suggested rooms going missing ([\#9236](https://github.com/matrix-org/matrix-react-sdk/pull/9236)). Fixes vector-im/element-web#23190.
+ * Fix tooltip infinitely recursing ([\#9235](https://github.com/matrix-org/matrix-react-sdk/pull/9235)). Fixes matrix-org/element-web-rageshakes#15107, matrix-org/element-web-rageshakes#15093 matrix-org/element-web-rageshakes#15092 and matrix-org/element-web-rageshakes#15077.
+ * Fix plain text export saving ([\#9230](https://github.com/matrix-org/matrix-react-sdk/pull/9230)). Contributed by @jryans.
+ * Add missing space in SecurityRoomSettingsTab ([\#9222](https://github.com/matrix-org/matrix-react-sdk/pull/9222)). Contributed by @gefgu.
+ * Make use of js-sdk roomNameGenerator to handle i18n for generated room names ([\#9209](https://github.com/matrix-org/matrix-react-sdk/pull/9209)). Fixes vector-im/element-web#21369.
+ * Fix progress bar regression throughout the app ([\#9219](https://github.com/matrix-org/matrix-react-sdk/pull/9219)). Fixes vector-im/element-web#23121.
+ * Reuse empty string & space string logic for event types in devtools ([\#9218](https://github.com/matrix-org/matrix-react-sdk/pull/9218)). Fixes vector-im/element-web#23115.
+
 Changes in [1.11.4](https://github.com/vector-im/element-desktop/releases/tag/v1.11.4) (2022-08-31)
 ===================================================================================================
+
+## 🔒 Security
+* Fixes for [CVE-2022-36059](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE%2D2022%2D36059) and [CVE-2022-36060](https://cve.mitre.org/cgi-bin/cvekey.cgi?keyword=CVE%2D2022%2D36060)
+
+Learn more about what we've been up to at https://element.io/blog/element-web-desktop-1-11-4-a-security-update-deferred-dms-and-more/
+Find more details of the vulnerabilities at https://matrix.org/blog/2022/08/31/security-releases-matrix-js-sdk-19-4-0-and-matrix-react-sdk-3-53-0
 
 ## ✨ Features
  * Upgrade to Electron 20 ([\#403](https://github.com/vector-im/element-desktop/pull/403)).
@@ -1147,8 +1173,12 @@ Changes in [1.9.8](https://github.com/vector-im/element-desktop/releases/tag/v1.
 Changes in [1.9.7](https://github.com/vector-im/element-desktop/releases/tag/v1.9.7) (2021-12-13)
 =================================================================================================
 
- * Security release with updated version of Olm to fix https://matrix.org/blog/2021/12/03/pre-disclosure-upcoming-security-release-of-libolm-and-matrix-js-sdk
- * Fix a crash on logout
+## 🔒 SECURITY FIXES
+* Security release with updated version of Olm to fix https://matrix.org/blog/2021/12/03/pre-disclosure-upcoming-security-release-of-libolm-and-matrix-js-sdk
+* Upgrade Electron to 13.5.2 to fix https://matrix.org/blog/2022/01/31/high-severity-vulnerability-in-element-desktop-1-9-6-and-earlier (https://github.com/vector-im/element-desktop/security/advisories/GHSA-mjrg-9f8r-h3m7)
+
+## 🐛 Bug Fixes
+* Fix a crash on logout
 
 Changes in [1.9.6](https://github.com/vector-im/element-desktop/releases/tag/v1.9.6) (2021-12-06)
 =================================================================================================
