@@ -17,7 +17,7 @@
     "Hide": "Agochar",
     "Services": "Servizos",
     "About": "Acerca de",
-    "Element Help": "Axuda de SchildiChat",
+    "Element Help": "Axuda de Element",
     "Help": "Axuda",
     "Close": "Pechar",
     "Minimize": "Minimizar",
@@ -41,6 +41,6 @@
     "Quit": "Saír",
     "Show/Hide": "Mostrar/Agochar",
     "Are you sure you want to quit?": "Tes a certeza de que queres saír?",
-    "Close Element": "Pechar SchildiChat",
+    "Close Element": "Pechar Element",
     "Cancel": "Cancelar"
 }

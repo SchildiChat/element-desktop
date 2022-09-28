@@ -19,7 +19,7 @@
     "Hide Others": "Andere verstecken",
     "Hide": "Verstecken",
     "About": "Über",
-    "Element Help": "Hilfe zu SchildiChat",
+    "Element Help": "Hilfe zu Element",
     "Help": "Hilfe",
     "Close": "Schließen",
     "Minimize": "Minimieren",
@@ -41,8 +41,7 @@
     "Edit": "Bearbeiten",
     "Quit": "Beenden",
     "Show/Hide": "Anzeigen/Ausblenden",
-    "Close Element": "SchildiChat schließen",
+    "Close Element": "Element schließen",
     "Cancel": "Abbrechen",
-    "Copy image address": "Bild-Adresse kopieren",
-    "Show": "Anzeigen"
+    "Copy image address": "Bild-Adresse kopieren"
 }
