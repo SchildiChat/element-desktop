@@ -17,7 +17,7 @@
     "Hide": "Verbergen",
     "Services": "Diensten",
     "About": "Over",
-    "Element Help": "SchildiChat-hulp",
+    "Element Help": "Element-hulp",
     "Help": "Help",
     "Close": "Sluiten",
     "Minimize": "Minimaliseren",
@@ -41,8 +41,7 @@
     "Quit": "Sluiten",
     "Show/Hide": "Tonen/Verbergen",
     "Are you sure you want to quit?": "Weet u zeker dat u wilt stoppen?",
-    "Close Element": "SchildiChat sluiten",
+    "Close Element": "Element sluiten",
     "Cancel": "Annuleren",
-    "Copy image address": "Kopieer afbeeldingsadres",
-    "Show": "Tonen"
+    "Copy image address": "Kopieer afbeeldingsadres"
 }
