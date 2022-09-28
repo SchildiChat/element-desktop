@@ -15,7 +15,7 @@
     "Hide": "Esconder",
     "Services": "Serviços",
     "About": "Sobre",
-    "Element Help": "Ajuda de Element",
+    "Element Help": "Ajuda de SchildiChat",
     "Help": "Ajuda",
     "Close": "Fechar",
     "Minimize": "Minimizar",
@@ -39,9 +39,10 @@
     "Quit": "Sair",
     "Show/Hide": "Mostrar/Esconder",
     "Are you sure you want to quit?": "Você tem certeza que você quer sair?",
-    "Close Element": "Fechar Element",
+    "Close Element": "Fechar SchildiChat",
     "Cancel": "Cancelar",
     "Bring All to Front": "Trazer Todas Para Frente",
     "Hide Others": "Esconder Outras(os)",
-    "Copy image address": "Copiar endereço de imagem"
+    "Copy image address": "Copiar endereço de imagem",
+    "Show": "Mostrar"
 }
