@@ -22,7 +22,7 @@ import fs from "fs";
 
 import { _t } from "./language-helper";
 
-let trayIcon: Tray = null;
+let trayIcon: Tray | null = null;
 
 export function hasTray(): boolean {
     return (trayIcon !== null);
@@ -75,7 +75,7 @@ export function create(config: IConfig): void {
         if (!favicons || favicons.length <= 0 || !favicons[0].startsWith('data:')) {
             if (lastFavicon !== null) {
                 global.mainWindow.setIcon(defaultIcon);
-                trayIcon.setImage(defaultIcon);
+                trayIcon?.setImage(defaultIcon);
                 lastFavicon = null;
             }
             return;
@@ -98,12 +98,12 @@ export function create(config: IConfig): void {
             }
         }
 
-        trayIcon.setImage(newFavicon);
+        trayIcon?.setImage(newFavicon);
         global.mainWindow.setIcon(newFavicon);
     });
 
     global.mainWindow.webContents.on('page-title-updated', function(ev, title) {
-        trayIcon.setToolTip(title);
+        trayIcon?.setToolTip(title);
     });
 }
 
