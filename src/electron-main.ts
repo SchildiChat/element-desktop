@@ -549,20 +549,6 @@ app.on('second-instance', (ev, commandLine, workingDirectory) => {
     }
 });
 
-app.on('continue-activity', (ev, type, userInfo) => {
-    if (type == "org.matrix.room" && userInfo["id"]) {
-        ev.preventDefault();
-
-        global.mainWindow.loadURL('vector://vector/webapp/#/room/'.concat(userInfo["id"]));
-
-        if (global.mainWindow) {
-            if (!global.mainWindow.isVisible()) global.mainWindow.show();
-            if (global.mainWindow.isMinimized()) global.mainWindow.restore();
-            global.mainWindow.focus();
-        }
-    }
-});
-
 // Set the App User Model ID to match what the squirrel
 // installer uses for the shortcut icon.
 // This makes notifications work on windows 8.1 (and is

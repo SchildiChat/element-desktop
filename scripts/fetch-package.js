@@ -97,7 +97,7 @@ async function main() {
         filename = 'develop.tar.gz';
         url = DEVELOP_TGZ_URL;
         verify = false; // develop builds aren't signed
-    } else if (targetVersion.includes("://")) {
+    } else if (targetVersion?.includes("://")) {
         filename = targetVersion.substring(targetVersion.lastIndexOf("/") + 1);
         url = targetVersion;
         verify = false; // manually verified
