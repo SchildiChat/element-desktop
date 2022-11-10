@@ -4,14 +4,14 @@
     "Quit": "Quitter",
     "Show/Hide": "Afficher/Masquer",
     "Are you sure you want to quit?": "Êtes-vous sûr de vouloir quitter ?",
-    "Close Element": "Fermer Element",
+    "Close Element": "Fermer SchildiChat",
     "Cancel": "Annuler",
     "Unhide": "Dé-masquer",
     "Hide Others": "Masquer les autres",
     "Hide": "Masquer",
     "Services": "Services",
     "About": "À propos",
-    "Element Help": "Aide d’Element",
+    "Element Help": "Aide d’SchildiChat",
     "Help": "Aide",
     "Close": "Fermer",
     "Minimize": "Minimiser",
@@ -43,5 +43,6 @@
     "Stop Speaking": "Arrêter la dictée",
     "Start Speaking": "Commencer la dictée",
     "Copy image address": "Copier l'adresse de l'image",
-    "Redo": "Refaire"
+    "Redo": "Refaire",
+    "Show": "Afficher"
 }
