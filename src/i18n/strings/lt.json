@@ -29,7 +29,7 @@
     "Hide": "Slėpti",
     "Services": "Paslaugos",
     "About": "Apie",
-    "Element Help": "SchildiChat Pagalba",
+    "Element Help": "Element Pagalba",
     "Help": "Pagalba",
     "Close": "Uždaryti",
     "Minimize": "Sumažinti",
@@ -42,7 +42,6 @@
     "Quit": "Išeiti",
     "Show/Hide": "Rodyti/Slėpti",
     "Are you sure you want to quit?": "Ar tikrai norite išeiti?",
-    "Close Element": "Uždaryti SchildiChat",
-    "Cancel": "Atšaukti",
-    "Show": "Rodyti"
+    "Close Element": "Uždaryti Element",
+    "Cancel": "Atšaukti"
 }
