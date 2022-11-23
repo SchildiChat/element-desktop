@@ -1,7 +1,7 @@
 {
     "Edit": "Изменить",
     "Quit": "Выйти",
-    "Close Element": "Закрыть SchildiChat",
+    "Close Element": "Закрыть Element",
     "Cancel": "Отмена",
     "Show/Hide": "Показать/скрыть",
     "Are you sure you want to quit?": "Вы уверены, что хотите выйти?",
@@ -13,7 +13,7 @@
     "Hide": "Скрыть",
     "Services": "Сервисы",
     "About": "О программе",
-    "Element Help": "Справка SchildiChat",
+    "Element Help": "Справка Element",
     "Help": "Справка",
     "Close": "Закрыть",
     "Minimize": "Свернуть",
@@ -44,6 +44,5 @@
     "Hide Others": "Скрыть прочие",
     "Paste and Match Style": "Вставить с тем же стилем",
     "Copy image address": "Копировать адрес изображения",
-    "Close %(brand)s": "Закрыть %(brand)s",
-    "Show": "Показать"
+    "Close %(brand)s": "Закрыть %(brand)s"
 }
