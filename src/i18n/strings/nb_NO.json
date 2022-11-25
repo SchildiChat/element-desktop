@@ -12,7 +12,7 @@
     "Speech": "Tale",
     "Hide": "Skjul",
     "About": "Om",
-    "Element Help": "Element Hjelp",
+    "Element Help": "SchildiChat Hjelp",
     "Help": "Hjelp",
     "Close": "Lukk",
     "Minimize": "Minimere",
@@ -32,5 +32,6 @@
     "Are you sure you want to quit?": "Er du sikker på at du vil slutte?",
     "Cancel": "Avbryt",
     "Services": "Tjenester",
-    "Hide Others": "Skjul Andre"
+    "Hide Others": "Skjul Andre",
+    "Show": "Vis"
 }
