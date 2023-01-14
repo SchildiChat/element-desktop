@@ -29,7 +29,7 @@ const client = new S3Client({
     },
 });
 
-const templateLayout = (content: string) => `
+const templateLayout = (content: string): string => `
 <!DOCTYPE html>
 <html>
     <head>
@@ -80,7 +80,7 @@ const templateLayout = (content: string) => `
  *
  * @return Formatted string.
  */
-function humanFileSize(bytes: number, si = false, dp = 1) {
+function humanFileSize(bytes: number, si = false, dp = 1): string {
     const thresh = si ? 1000 : 1024;
 
     if (Math.abs(bytes) < thresh) {
@@ -101,7 +101,7 @@ function humanFileSize(bytes: number, si = false, dp = 1) {
     return bytes.toFixed(dp) + ' ' + units[u];
 }
 
-const dateTimeOptions = {
+const dateTimeOptions: Intl.DateTimeFormatOptions = {
     year: "numeric",
     month: "short",
     day: "2-digit",

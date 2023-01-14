@@ -63,7 +63,7 @@ export function _t(text: string, variables: IVariables = {}): string {
 
 type Component = () => void;
 
-type TypedStore = Store<{ locale?: string[] }>;
+type TypedStore = Store<{ locale?: string | string[] }>;
 
 export class AppLocalization {
     private static readonly STORE_KEY = "locale";
@@ -71,7 +71,7 @@ export class AppLocalization {
     private readonly store: TypedStore;
     private readonly localizedComponents?: Set<Component>;
 
-    constructor({ store, components = [] }: { store: TypedStore, components: Component[] }) {
+    public constructor({ store, components = [] }: { store: TypedStore, components: Component[] }) {
         counterpart.registerTranslations(FALLBACK_LOCALE, this.fetchTranslationJson("en_EN"));
         counterpart.setFallbackLocale(FALLBACK_LOCALE);
         counterpart.setSeparator('|');

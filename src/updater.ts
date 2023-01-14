@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-import { app, autoUpdater, ipcMain } from "electron";
+import { autoUpdater, ipcMain } from "electron";
 
 const UPDATE_POLL_INTERVAL_MS = 60 * 60 * 1000;
 const INITIAL_UPDATE_DELAY_MS = 30 * 1000;
@@ -50,11 +50,8 @@ export function start(updateBaseUrl: string): void {
     }
     try {
         let url: string;
-        // For reasons best known to Squirrel, the way it checks for updates
-        // is completely different between macOS and windows. On macOS, it
-        // hits a URL that either gives it a 200 with some json or
-        // 204 No Content. On windows it takes a base path and looks for
-        // files under that path.
+        let serverType: "json" | undefined;
+
         if (process.platform === 'darwin') {
             // include the current version in the URL we hit. Electron doesn't add
             // it anywhere (apart from the User-Agent) so it's up to us. We could
@@ -64,6 +61,7 @@ export function start(updateBaseUrl: string): void {
             // app updates it always gets a fresh value to avoid update-looping.
             url = `${updateBaseUrl}macos.json`;
         } else if (process.platform === 'win32') {
+            // On windows it takes a base path and looks for files under that path.
             url = `${updateBaseUrl}win32/${process.arch}/`;
         } else {
             // Squirrel / electron only supports auto-update on these two platforms.
@@ -75,7 +73,7 @@ export function start(updateBaseUrl: string): void {
 
         if (url) {
             console.log(`Update URL: ${url}`);
-            autoUpdater.setFeedURL({ url });
+            autoUpdater.setFeedURL({ url, serverType });
             // We check for updates ourselves rather than using 'updater' because we need to
             // do it in the main process (and we don't really need to check every 10 minutes:
             // every hour should be just fine for a desktop app)
