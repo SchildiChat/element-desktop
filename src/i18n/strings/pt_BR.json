@@ -15,7 +15,7 @@
     "Hide": "Esconder",
     "Services": "Serviços",
     "About": "Sobre",
-    "Element Help": "Ajuda de Element",
+    "Element Help": "Ajuda de SchildiChat",
     "Help": "Ajuda",
     "Close": "Fechar",
     "Minimize": "Minimizar",
@@ -43,5 +43,6 @@
     "Bring All to Front": "Trazer Todas Para Frente",
     "Hide Others": "Esconder Outras(os)",
     "Copy image address": "Copiar endereço de imagem",
-    "Close %(brand)s": "Fechar %(brand)s"
+    "Close %(brand)s": "Fechar %(brand)s",
+    "Show": "Mostrar"
 }
