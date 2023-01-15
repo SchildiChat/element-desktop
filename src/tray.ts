@@ -46,13 +46,13 @@ function toggleWin(): void {
 }
 
 const showWin = function() {
-    if (global.mainWindow.isMinimized()) global.mainWindow.restore();
-    if (!global.mainWindow.isVisible()) global.mainWindow.show();
-    global.mainWindow.focus();
+    if (global.mainWindow?.isMinimized()) global.mainWindow.restore();
+    if (!global.mainWindow?.isVisible()) global.mainWindow?.show();
+    global.mainWindow?.focus();
 };
 
 const hideWin = function() {
-    global.mainWindow.hide();
+    global.mainWindow?.hide();
 };
 
 interface IConfig {
