@@ -25,7 +25,7 @@ import { _t } from "./language-helper";
 let trayIcon: Tray | null = null;
 
 export function hasTray(): boolean {
-    return (trayIcon !== null);
+    return trayIcon !== null;
 }
 
 export function destroy(): void {
@@ -45,13 +45,13 @@ function toggleWin(): void {
     }
 }
 
-const showWin = function() {
+const showWin = function(): void {
     if (global.mainWindow?.isMinimized()) global.mainWindow.restore();
     if (!global.mainWindow?.isVisible()) global.mainWindow?.show();
     global.mainWindow?.focus();
 };
 
-const hideWin = function() {
+const hideWin = function(): void {
     global.mainWindow?.hide();
 };
 
@@ -62,17 +62,17 @@ interface IConfig {
 
 export function create(config: IConfig): void {
     // no trays on darwin
-    if (process.platform === 'darwin' || trayIcon) return;
+    if (process.platform === "darwin" || trayIcon) return;
     const defaultIcon = nativeImage.createFromPath(config.icon_path);
 
     trayIcon = new Tray(defaultIcon);
     trayIcon.setToolTip(config.brand);
     initApplicationMenu();
-    trayIcon.on('click', toggleWin);
+    trayIcon.on("click", toggleWin);
 
     let lastFavicon: string | null = null;
-    global.mainWindow?.webContents.on('page-favicon-updated', async function(ev, favicons) {
-        if (!favicons || favicons.length <= 0 || !favicons[0].startsWith('data:')) {
+    global.mainWindow?.webContents.on("page-favicon-updated", async function (ev, favicons) {
+        if (!favicons || favicons.length <= 0 || !favicons[0].startsWith("data:")) {
             if (lastFavicon !== null) {
                 global.mainWindow?.setIcon(defaultIcon);
                 trayIcon?.setImage(defaultIcon);
@@ -88,9 +88,9 @@ export function create(config: IConfig): void {
         let newFavicon = nativeImage.createFromDataURL(favicons[0]);
 
         // Windows likes ico's too much.
-        if (process.platform === 'win32') {
+        if (process.platform === "win32") {
             try {
-                const icoPath = path.join(app.getPath('temp'), 'win32_element_icon.ico');
+                const icoPath = path.join(app.getPath("temp"), "win32_element_icon.ico");
                 fs.writeFileSync(icoPath, await pngToIco(newFavicon.toPNG()));
                 newFavicon = nativeImage.createFromPath(icoPath);
             } catch (e) {
@@ -102,7 +102,7 @@ export function create(config: IConfig): void {
         global.mainWindow?.setIcon(newFavicon);
     });
 
-    global.mainWindow?.webContents.on('page-title-updated', function(ev, title) {
+    global.mainWindow?.webContents.on("page-title-updated", function (ev, title) {
         trayIcon?.setToolTip(title);
     });
 }
@@ -114,21 +114,21 @@ export function initApplicationMenu(): void {
 
     const contextMenu = Menu.buildFromTemplate([
         // {
-        //     label: _t('Show/Hide'),
+        //     label: _t("Show/Hide"),
         //     click: toggleWin,
         // },
         {
-            label: _t('Show'),
+            label: _t("Show"),
             click: showWin,
         },
         {
-            label: _t('Hide'),
+            label: _t("Hide"),
             click: hideWin,
         },
-        { type: 'separator' },
+        { type: "separator" },
         {
-            label: _t('Quit'),
-            click: function(): void {
+            label: _t("Quit"),
+            click: function (): void {
                 app.quit();
             },
         },

@@ -16,3 +16,5 @@ node_modules/
 /test_artifacts/
 /coverage/
 yarn-error.log
+/hak/**/*.js
+/scripts/hak/**/*.js
