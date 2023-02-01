@@ -17,7 +17,7 @@
     "Hide": "Gizle",
     "Services": "Hizmetler",
     "About": "Hakkında",
-    "Element Help": "Element yardımı",
+    "Element Help": "SchildiChat yardımı",
     "Help": "Yardım",
     "Close": "Kapat",
     "Minimize": "Küçült",
@@ -42,5 +42,6 @@
     "Show/Hide": "Göster/Gizle",
     "Are you sure you want to quit?": "Çıkmak istediğinize emin misiniz?",
     "Cancel": "İptal",
-    "Copy image address": "Görsel adresini kopyala"
+    "Copy image address": "Görsel adresini kopyala",
+    "Show": "Göster"
 }
