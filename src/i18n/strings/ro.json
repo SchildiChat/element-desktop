@@ -15,7 +15,7 @@
     "Hide": "Ascunde",
     "Services": "Servicii",
     "About": "Despre",
-    "Element Help": "Ajutor Element",
+    "Element Help": "Ajutor SchildiChat",
     "Help": "Ajutor",
     "Close": "Inchide",
     "Minimize": "Minimizare",
@@ -40,5 +40,6 @@
     "Are you sure you want to quit?": "Sigur vrei să ieși din cont?",
     "Cancel": "Anulare",
     "Close %(brand)s": "Închide %(brand)s",
-    "Cut": "Taie"
+    "Cut": "Taie",
+    "Show": "Arată"
 }
