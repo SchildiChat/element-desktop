@@ -55,7 +55,7 @@ async function main(): Promise<number | undefined> {
     let filename: string | undefined;
     let url: string | undefined;
     let setVersion = false;
-    let sc = true;
+    const sc = true;
 
     while (process.argv.length > 2) {
         switch (process.argv[2]) {
@@ -85,6 +85,7 @@ async function main(): Promise<number | undefined> {
     }
 
     if (sc) {
+        // nothing
     } else if (targetVersion === undefined) {
         targetVersion = "v" + riotDesktopPackageJson.version;
     } else if (targetVersion !== "develop") {

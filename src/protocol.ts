@@ -82,9 +82,9 @@ export function recordSSOSession(sessionID: string): void {
 
 export function getProfileFromDeeplink(args: string[]): string | undefined {
     // check if we are passed a profile in the SSO callback url
-    const deeplinkUrl = args.find(arg => [...PROTOCOLS]
-        .map(protocol => protocol + "//")
-        .some(prefix => arg.startsWith(prefix)));
+    const deeplinkUrl = args.find((arg) => [...PROTOCOLS]
+        .map((protocol) => protocol + "//")
+        .some((prefix) => arg.startsWith(prefix)));
     if (deeplinkUrl?.includes(SEARCH_PARAM)) {
         const parsedUrl = new URL(deeplinkUrl);
         if (PROTOCOLS.has(parsedUrl.protocol)) {
@@ -119,7 +119,7 @@ export function protocolInit(): void {
         // Protocol handler for win32/Linux
         app.on("second-instance", (ev, commandLine) => {
             const url = commandLine[commandLine.length - 1];
-            if (![...PROTOCOLS].map(protocol => protocol + "//").some(prefix => url.startsWith(prefix))) return;
+            if (![...PROTOCOLS].map((protocol) => protocol + "//").some((prefix) => url.startsWith(prefix))) return;
             processUrl(url);
         });
     }
