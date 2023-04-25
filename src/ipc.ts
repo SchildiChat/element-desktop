@@ -192,7 +192,7 @@ ipcMain.on("ipcCall", async function (_ev: IpcMainEvent, payload) {
             global.mainWindow.webContents.session.flushStorageData();
             await global.mainWindow.webContents.session.clearStorageData();
             relaunchApp();
-            break;
+            return; // the app is about to stop, we don't need to reply to the IPC
 
         case "breadcrumbs": {
             if (process.platform === "darwin") {
@@ -220,7 +220,8 @@ ipcMain.on("ipcCall", async function (_ev: IpcMainEvent, payload) {
                                     return resp.arrayBuffer();
                                 })
                                 .then((arrayBuffer) => {
-                                    const buffer = Buffer.from(arrayBuffer!);
+                                    if (!arrayBuffer) return;
+                                    const buffer = Buffer.from(arrayBuffer);
                                     button.icon = nativeImage.createFromBuffer(buffer);
                                     button.label = "";
                                     button.backgroundColor = "";
