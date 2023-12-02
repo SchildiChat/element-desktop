@@ -55,6 +55,7 @@ async function main(): Promise<number | undefined> {
     let filename: string | undefined;
     let url: string | undefined;
     let setVersion = false;
+    const sc = true;
 
     while (process.argv.length > 2) {
         switch (process.argv[2]) {
@@ -83,7 +84,9 @@ async function main(): Promise<number | undefined> {
         process.argv.shift();
     }
 
-    if (targetVersion === undefined) {
+    if (sc) {
+        // nothing
+    } else if (targetVersion === undefined) {
         targetVersion = "v" + riotDesktopPackageJson.version;
     } else if (targetVersion !== "develop") {
         setVersion = true; // version was specified
@@ -93,7 +96,7 @@ async function main(): Promise<number | undefined> {
         filename = "develop.tar.gz";
         url = DEVELOP_TGZ_URL;
         verify = false; // develop builds aren't signed
-    } else if (targetVersion.includes("://")) {
+    } else if (targetVersion?.includes("://")) {
         filename = targetVersion.substring(targetVersion.lastIndexOf("/") + 1);
         url = targetVersion;
         verify = false; // manually verified
@@ -143,12 +146,15 @@ async function main(): Promise<number | undefined> {
     }
 
     let haveDeploy = false;
-    let expectedDeployDir = path.join(deployDir, path.basename(filename).replace(/\.tar\.gz/, ""));
+    let expectedDeployDir = sc ? "../element-web/webapp" : path.join(deployDir, path.basename(filename).replace(/\.tar\.gz/, ""));
     try {
         await fs.opendir(expectedDeployDir);
         console.log(expectedDeployDir + "already exists");
         haveDeploy = true;
-    } catch (e) {}
+    } catch (e) {
+        console.log("Not a valid webapp dir: " + expectedDeployDir, e);
+        return 1;
+    }
 
     if (!haveDeploy) {
         const outPath = path.join(pkgDir, filename);
