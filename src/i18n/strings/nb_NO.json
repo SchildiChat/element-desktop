@@ -12,7 +12,7 @@
     "Speech": "Tale",
     "Hide": "Skjul",
     "About": "Om",
-    "Element Help": "SchildiChat Hjelp",
+    "Element Help": "Element Hjelp",
     "Help": "Hjelp",
     "Close": "Lukk",
     "Minimize": "Minimere",
@@ -34,6 +34,5 @@
     "Services": "Tjenester",
     "Hide Others": "Skjul Andre",
     "Bring All to Front": "Flytt Alt Frem",
-    "Toggle Full Screen": "Veksle Fullskjerm",
-    "Show": "Vis"
+    "Toggle Full Screen": "Veksle Fullskjerm"
 }
