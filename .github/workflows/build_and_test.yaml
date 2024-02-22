@@ -41,7 +41,7 @@ jobs:
 
             - name: "Get modified files"
               id: changed_files
-              uses: tj-actions/changed-files@5978e5a2df95ef20cde627d4acb5edd1f87ba46a # v36
+              uses: tj-actions/changed-files@bb3376162b179308a79fc4450262a15a8e1d6888 # v37
               with:
                   files: |
                       dockerbuild/*
@@ -63,7 +63,7 @@ jobs:
 
             - name: Build and push Docker image
               if: steps.changed_files.outputs.any_modified == 'true'
-              uses: docker/build-push-action@f9efed53cc1b0364ba947400ac02042bbbaac7fc
+              uses: docker/build-push-action@2eb1c1961a95fc15694676618e422e8ba1d63825
               with:
                   context: dockerbuild
                   push: true
