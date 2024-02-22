@@ -10,7 +10,7 @@
     "Hide": "Masquer",
     "Services": "Services",
     "About": "À propos",
-    "Element Help": "Aide d’SchildiChat",
+    "Element Help": "Aide d’Element",
     "Help": "Aide",
     "Close": "Fermer",
     "Minimize": "Minimiser",
@@ -43,6 +43,5 @@
     "Start Speaking": "Commencer la dictée",
     "Copy image address": "Copier l'adresse de l'image",
     "Redo": "Refaire",
-    "Close %(brand)s": "Fermer %(brand)s",
-    "Show": "Afficher"
+    "Close %(brand)s": "Fermer %(brand)s"
 }

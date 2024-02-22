@@ -12,7 +12,7 @@
     "Hide": "Скрыть",
     "Services": "Сервисы",
     "About": "О программе",
-    "Element Help": "Справка SchildiChat",
+    "Element Help": "Справка Element",
     "Help": "Справка",
     "Close": "Закрыть",
     "Minimize": "Свернуть",
@@ -43,6 +43,5 @@
     "Hide Others": "Скрыть прочие",
     "Paste and Match Style": "Вставить с тем же стилем",
     "Copy image address": "Копировать адрес изображения",
-    "Close %(brand)s": "Закрыть %(brand)s",
-    "Show": "Показать"
+    "Close %(brand)s": "Закрыть %(brand)s"
 }
