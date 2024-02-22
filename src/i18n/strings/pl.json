@@ -43,5 +43,6 @@
     "Cancel": "Anuluj",
     "Copy image address": "Kopiuj adres obrazu",
     "Close %(brand)s": "Zamknij %(brand)s",
-    "%(brand)s Help": "Pomoc %(brand)s"
+    "%(brand)s Help": "Pomoc %(brand)s",
+    "Show": "Pokaż"
 }

@@ -43,5 +43,6 @@
     "Paste and Match Style": "Вставить с тем же стилем",
     "Copy image address": "Копировать адрес изображения",
     "Close %(brand)s": "Закрыть %(brand)s",
-    "%(brand)s Help": "Помощь %(brand)s"
+    "%(brand)s Help": "Помощь %(brand)s",
+    "Show": "Показать"
 }

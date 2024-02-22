@@ -42,5 +42,6 @@
     "Are you sure you want to quit?": "Weet u zeker dat u wilt stoppen?",
     "Cancel": "Annuleren",
     "Copy image address": "Kopieer afbeeldingsadres",
-    "Close %(brand)s": "Sluit %(brand)s"
+    "Close %(brand)s": "Sluit %(brand)s",
+    "Show": "Tonen"
 }
