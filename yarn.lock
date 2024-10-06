@@ -4864,6 +4864,11 @@ matcher@^3.0.0:
   dependencies:
     escape-string-regexp "^4.0.0"
 
+matrix-seshat@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/matrix-seshat/-/matrix-seshat-4.0.0.tgz#8a11186ccaaa6c58b44f8e761cc0c29728a980c3"
+  integrity sha512-iZ2ST+9NyAgWFV46OgBse+SlTtQsIlLuDjJcJxI88RhJr4zCzXXXcddGa4S59LDozTDwsGcQjXhSj1ktFc0g3Q==
+
 matrix-web-i18n@^3.2.1:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/matrix-web-i18n/-/matrix-web-i18n-3.3.0.tgz#a9f9d87d18ef96f75171883abbf201952cbfbe22"
