@@ -1331,7 +1331,7 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.57.1.tgz#de633db3ec2ef6a3c89e2f19038063e8a122e2c2"
   integrity sha512-d9zaMRSTIKDLhctzH12MtXvJKSSUhaHcjV+2Z+GK+EEY7XKpP5yR4x+N3TAcHTcu963nIr+TMcCb4DBCYX1z6Q==
 
-"@fastify/otel@github:getsentry/fastify-otel#otel-v1":
+"@fastify/otel@getsentry/fastify-otel#otel-v1":
   version "0.8.0"
   resolved "https://codeload.github.com/getsentry/fastify-otel/tar.gz/ae3088d65e286bdc94ac5d722573537d6a6671bb"
   dependencies:
@@ -5436,6 +5436,11 @@ math-intrinsics@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/math-intrinsics/-/math-intrinsics-1.1.0.tgz#a0dd74be81e2aa5c2f27e65ce283605ee4e2b7f9"
   integrity sha512-/IXtbwEk5HTPyEwyKX6hGkYXxM9nbj64B+ilVJnC/R6B0pH5G4V3b0pVbL7DBj4tkhBAppbQUlf6F6Xl9LHu1g==
+
+matrix-seshat@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/matrix-seshat/-/matrix-seshat-4.0.1.tgz#d1a311139fef84a30d09f1e0061a3d447b929c2f"
+  integrity sha512-Y/0sXM/6g0v7JHiYsARCoG2c7sG5wsmyLdZ1ZytlL24mY8WbqPpVEzUn1wggHREXujJT6nIcGj8uOtbNygEKBQ==
 
 matrix-web-i18n@^3.2.1:
   version "3.3.0"

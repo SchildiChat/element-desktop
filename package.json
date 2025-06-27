@@ -63,6 +63,7 @@
         "electron-store": "^10.0.0",
         "electron-window-state": "^5.0.3",
         "keytar-forked": "7.10.0",
+        "matrix-seshat": "^4.0.1",
         "minimist": "^1.2.6",
         "png-to-ico": "^2.1.1",
         "uuid": "^11.0.0"
